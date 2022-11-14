@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão rádio</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <div class="p01">
+<h1>Lista de peças automotivas</h1>
+</div>
+<div class="p02">
+    <ul id="mylist">
+
+        <li>Disco de freio</li>
+        <li>Plator</li>
+        <li>Vela de ignição</li>
+  
+  
+      </ul>
+    </div>
+  
+      <input type="text" id="entrada" value="">
+    
+      <br>
+  
+      <input type="radio" name="cores" style="color: red" value="red">Vermelho</input>
+      <input type="radio" name="cores" style="color: yellow" value="yellow">Amarelo</input>
+      <input type="radio" name="cores" style="color: green" value="green">Verde</input>
+      <br> 
+      <br>
+  
+      <button onclick="myFunction()">Adicionar</button>
+  
+      <script>
+        element.addEventListener("click", myFunction);
+        function myFunction() {
+          const texto = document.getElementById("entrada").value;
+          const node = document.createElement("li");
+          const textnode = document.createTextNode(texto);
+          node.appendChild(textnode);
+          document.getElementById("mylist").appendChild(node);
+  
+          let cor = "";
+          cor = document.querySelector('input[name="cores"]:checked').value
+          node.style.color = cor
+        }
+  
+      </script>
+  
+
+  </body>
+  
+</body>
+</html>
